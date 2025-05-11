@@ -4,12 +4,12 @@ class User():
         self.login = login
         self.password = password
 
-    def register(self, login: str, password:str):
+    def register(self):
         insert = """
-        INSERT INTO User (Login, password)
+        INSERT INTO Users (Login, password)
         VALUES (?,?)"""
 
-        return insert, (login, password)
+        return insert, (self.login, self.password)
 
     def login(self):
         pass
